@@ -1,0 +1,59 @@
+.field_container{
+  width: 100%;
+}
+.input_box_base{
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  >input{
+    padding: 0px 10px;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: rgba(255,255,255, 0.3);
+  }
+  >input:focus{
+    border: 1px solid rgba(255,255,255, 0.3);
+  }
+  >span{
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    font-size: 9px;
+    color: #686666;
+  }
+  > .icon{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    margin-left: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #8a4af3;
+    color: #fff;
+    font-weight: bold;
+  }
+}
+.input_box_light{
+  >input{
+    background-color: rgba(255,255,255, 0.3);
+    color: black;
+  }
+}
+
+.input_box_dark{
+  >input{
+    background-color: #373878;
+    color: white;
+  }
+  >span{
+    color: rgba(255,255,255, 0.6);
+  }
+  > .icon{
+    background-color: #221c4a;
+  }
+}
