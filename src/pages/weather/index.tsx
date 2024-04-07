@@ -2,7 +2,7 @@ import styles from './styles.module.less'
 import SearchInput from './components/SearchInput'
 import Switch from "react-switch";
 import { useContext, useState } from 'react';
-import ThemeContext from '../../contexts/ThemeContext';
+import ThemeContext from 'contexts/ThemeContext';
 import WeatherInfo from './components/WeatherInfo';
 import SearchHistory from './components/SearchHistory';
 

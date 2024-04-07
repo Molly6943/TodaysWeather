@@ -2,8 +2,8 @@ import { useContext, useEffect, useRef } from "react";
 
 import styles from './SearchInput.module.less'
 import { FaSearch } from "react-icons/fa";
-import ThemeContext from "../../../contexts/ThemeContext";
-import useLocalStorage from "../../../hooks/useLocalStorage";
+import ThemeContext from "contexts/ThemeContext";
+import useLocalStorage from "hooks/useLocalStorage";
 
 interface WeatherQuery {
   q: string | null;

@@ -1,12 +1,11 @@
-// import { useEffect } from "react";
-import useLocalStorage from "../../../hooks/useLocalStorage";
+import useLocalStorage from "hooks/useLocalStorage";
 import { FaSearch } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import styles from './SearchHistory.module.less'
 import { useContext } from "react";
-import ThemeContext from "../../../contexts/ThemeContext";
-import useWindowSize from "../../../hooks/useWindowSize";
-import { formatDate } from "../../../utils/date";
+import ThemeContext from "contexts/ThemeContext";
+import useWindowSize from "hooks/useWindowSize";
+import { formatDate } from "utils/date";
 
 interface Props {
   onSearch: (searchText: string) => void;

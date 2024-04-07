@@ -18,7 +18,19 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    // all paths defined here must match the configured path in `vite.config.ts`
+    "baseUrl": "./",
+    "paths": {
+      "hooks/*": ["./src/hooks/*"],
+      "assets/*": ["./src/assets/*"],
+      "contexts/*":["./src/contexts/*"],
+      "utils/*": ["./src/utils/*"] 
+    },
+    "types": [
+      // ... your other types
+      "node"
+    ]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
