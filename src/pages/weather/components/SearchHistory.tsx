@@ -1,4 +1,3 @@
-import useLocalStorage from "hooks/useLocalStorage";
 import { FaSearch } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import styles from './SearchHistory.module.less'
@@ -6,15 +5,17 @@ import { useContext } from "react";
 import ThemeContext from "contexts/ThemeContext";
 import useWindowSize from "hooks/useWindowSize";
 import { formatDate } from "utils/date";
+import { HistoryItmes } from 'hooks/useLocalStorage'
 
 interface Props {
   onSearch: (searchText: string) => void;
+  value: HistoryItmes[],
+  setValue: (value: HistoryItmes[]) => void
 }
-const SearchHistory = ({ onSearch }: Props) => {
+
+const SearchHistory = ({ value, setValue, onSearch }: Props) => {
   const { darkTheme } = useContext(ThemeContext);
   const { width } = useWindowSize();
-
-  const [value, setValue] = useLocalStorage('historyItems');
 
   return <section className={`${styles.history_container} ${darkTheme ? styles.history_container_dark : styles.history_container_light}`}>
     <p>Search History</p>

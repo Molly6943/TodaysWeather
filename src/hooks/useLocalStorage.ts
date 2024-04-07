@@ -7,7 +7,7 @@ export interface HistoryItmes {
 }
 
 export default function useLocalStorage(key:string): [HistoryItmes[] | undefined, (value: HistoryItmes[]) => void] {
-  const [value, setValue] = useState(() => {
+  const [value, setValue] = useState<HistoryItmes[]>(() => {
     const defaultValue = [{ id: Math.floor(Math.random() * 1000) + 1, searchText:'singapore', date: new Date()}]
 
     const storedValue = localStorage.getItem(key);

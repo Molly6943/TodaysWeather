@@ -1,13 +1,14 @@
 import { useContext } from 'react'
+import ThemeContext from 'contexts/ThemeContext'
+
 import styles from './WeatherInfo.module.less'
 import cloudImg from 'assets/cloud.png'
-import ThemeContext from 'contexts/ThemeContext'
 import sunImg from 'assets/sun.png'
 import useWeather from 'hooks/useWeather'
-import { WeatherQuery } from '../index'
 import useWindowSize from 'hooks/useWindowSize'
 import { formatDate } from 'utils/date'
 import { kelvinToCelsius } from 'utils/temperature'
+import { WeatherQuery } from '../index'
 
 interface Props {
   weatherQuery: WeatherQuery;
