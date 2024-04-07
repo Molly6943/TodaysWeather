@@ -18,7 +18,7 @@ const WeatherInfo = ({ weatherQuery }: Props) => {
   const { darkTheme } = useContext(ThemeContext)
   const { data, error } = useWeather(weatherQuery)
 
-  if (error) return <div className={styles.error}>{error}</div>;
+  if (error) return <div className={styles.error}>{error}. Probably because you didn't enter a valid city/country name</div>;
 
   return <section className={`${styles.container} ${darkTheme ? styles.container_dark : styles.container_light}`}>
     <img className={styles.image} src={data.weather ? data.weather[0]?.main === 'Clouds' ? cloudImg : sunImg : sunImg} alt="image" />
