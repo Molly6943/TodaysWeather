@@ -1,4 +1,5 @@
 
+// format: DD-MM-YYYY hh:mm A
 function formatDate(date: Date) {  
   let hours = date.getHours();  
   const minutes = date.getMinutes();  

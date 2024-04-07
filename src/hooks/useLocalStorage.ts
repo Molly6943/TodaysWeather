@@ -11,7 +11,6 @@ export default function useLocalStorage(key:string): [HistoryItmes[] | undefined
     const defaultValue = [{ id: Math.floor(Math.random() * 1000) + 1, searchText:'singapore', date: new Date()}]
 
     const storedValue = localStorage.getItem(key);
-
     if (storedValue) {
       return JSON.parse(storedValue);
     }

@@ -17,7 +17,7 @@ const WeatherPage: React.FC = () => {
   const handleSearch = (q:string) => {
     setWeatherQuery({ ...weatherQuery, q })
   }
-  
+
   return (
     <section className={`${styles.page_container} ${darkTheme ? styles.page_container_dark : styles.page_container_light}`}>
     <div className={styles.color_switch}>
@@ -31,7 +31,7 @@ const WeatherPage: React.FC = () => {
       <header>
         <SearchInput weatherQuery={weatherQuery} onSearch={handleSearch} />
       </header>
-      <main className={styles.weather_info}>
+      <main className={`${styles.weather_info} ${darkTheme ? styles.weather_info_dark : styles.weather_info_light}`}>
         <WeatherInfo weatherQuery={weatherQuery} />
         <section>
           <SearchHistory onSearch={handleSearch} />

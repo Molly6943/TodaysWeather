@@ -1,6 +1,6 @@
 import { useContext, useRef } from "react";
 
-import styles from './SearchBox.module.less'
+import styles from './SearchInput.module.less'
 import { FaSearch } from "react-icons/fa";
 import ThemeContext from "../../../contexts/ThemeContext";
 import useLocalStorage from "../../../hooks/useLocalStorage";
