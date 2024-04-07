@@ -51,7 +51,8 @@ const WeatherPage: React.FC = () => {
         <main className={`${styles.weather_info} ${darkTheme ? styles.weather_info_dark : styles.weather_info_light}`}>
           <WeatherInfo weatherQuery={weatherQuery} />
           <section>
-            <SearchHistory value={value || []} setValue={setValue} onSearch={handleSearch} />
+            <SearchHistory value={value || []} setValue={setValue} onSearch={(q) =>     setWeatherQuery({ ...weatherQuery, q })
+} />
           </section>
         </main>
       </section>
