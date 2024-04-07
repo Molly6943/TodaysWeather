@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 
 import styles from './SearchInput.module.less'
 import { FaSearch } from "react-icons/fa";
@@ -17,6 +17,13 @@ const SearchInput = ({ weatherQuery, onSearch }: Props) => {
   const ref = useRef<HTMLInputElement>(null);
   const { darkTheme } = useContext(ThemeContext)
   const [value, setValue] = useLocalStorage('historyItems');
+
+  useEffect(() => {
+    // Update the input's value when weatherQuery.q changes
+    if (ref.current) {
+      ref.current.value = weatherQuery.q || 'singapore';
+    }
+  }, [weatherQuery.q]);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

@@ -16,10 +16,6 @@ const SearchHistory = ({ onSearch }: Props) => {
   const { width } = useWindowSize();
 
   const [value, setValue] = useLocalStorage('historyItems');
-  //   useEffect(() => {  
-  //     const aaa = JSON.parse(localStorage.getItem('historyItems') || '')
-  //     console.log('===?', 'update',aaa )
-  // }, [onSearch])
 
   return <section className={`${styles.history_container} ${darkTheme ? styles.history_container_dark : styles.history_container_light}`}>
     <p>Search History</p>
